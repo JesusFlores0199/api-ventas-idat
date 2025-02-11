@@ -14,10 +14,10 @@ public interface ProductRepository
     //FUNCIONES JPA
     //select * from product where discontinued = 0;
 
-    List<Product> findBydiscontinued(Boolean discontinued);
+    List<Product> findByDiscontinued(Boolean discontinued);
 
     //Sintaxis JPQL
-    @Query("SELECT p FROM Product p WHERE p.discomtinued=0")
+    @Query("SELECT p FROM Product p WHERE p.discontinued=false")
     List<Product> obtenerProductosActivos();
 
     @Query(value = "SELECT * FROM products WHERE discontinued=0",

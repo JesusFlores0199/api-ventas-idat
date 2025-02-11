@@ -16,7 +16,9 @@ public class ProductService {
     }
 
     public List<Product> obtenerProductos(){
-        return productRepository.findBydiscontinued(false);
+        //return productRepository.findByDiscontinued(false);
+        //return productRepository.obtenerProductosActivos();
+        return productRepository.obtenerProductosActivosSQL();
     }
 
 }
